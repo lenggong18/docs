@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting to HilltopAds...</title>
+  <meta http-equiv="refresh" content="5;url=https://hilltopads.com/?ref=315855">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    .spinner {
+      margin: 30px 0;
+      width: 60px;
+      height: 60px;
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #ff9800;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .button {
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #e68900;
+    }
+    #clicks {
+      margin-top: 15px;
+      font-size: 1em;
+      color: #ffd700;
+    }
+    .banner {
+      margin-top: 30px;
+    }
+    .banner img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Redirecting you to HilltopAds...</h1>
+  <div class="spinner"></div>
+  <p>Please wait a moment. If you are not redirected automatically, click below:</p>
+
+  <a id="referralButton" class="button" href="https://hilltopads.com/?ref=315855">Go Now</a>
+
+  <div id="clicks">Button clicked: 0 times</div>
+
+  <!-- SocialEarn Banner -->
+  <div class="banner">
+    <a href="https://socialearn.site/848566757721" target="_blank">
+      <img src="PUT_YOUR_BANNER_IMAGE_LINK_HERE" alt="Earn Money Online - SocialEarn">
+    </a>
+  </div>
+
+  <script>
+    let clickCount = localStorage.getItem('clickCount') ? parseInt(localStorage.getItem('clickCount')) : 0;
+    document.getElementById('clicks').innerText = `Button clicked: ${clickCount} time${clickCount !== 1 ? 's' : ''}`;
+
+    document.getElementById('referralButton').addEventListener('click', function() {
+      clickCount++;
+      localStorage.setItem('clickCount', clickCount);
+      document.getElementById('clicks').innerText = `Button clicked: ${clickCount} time${clickCount !== 1 ? 's' : ''}`;
+    });
+
+    setTimeout(function() {
+      window.location.href = "https://hilltopads.com/?ref=315855";
+    }, 5000); // 5 seconds delay
+  </script>
+
+</body>
+</html>
